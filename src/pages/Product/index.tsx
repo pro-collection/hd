@@ -6,12 +6,8 @@ const Product: FC = () => {
   return (
     <div className={styles.productContainer}>
       <Header />
-      <div className={styles.navigate}>
-        <span>App</span>
-        <span>Web</span>
-        <span>平面</span>
-        <span>绘画</span>
-        <span>运营</span>
+      <div>
+        12312k3l12j3l
       </div>
     </div>
   );

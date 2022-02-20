@@ -1,15 +1,27 @@
 .productContainer {
-  background-image: url("https://cdn.jsdelivr.net/gh/pro-collection/hd/src/static/product_base.jpg");
-  background-clip: content-box;
-  background-origin: content-box;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-  min-width: 1720px;
+  background-color: #000000;
   height: 2135px;
 }
 
-.navigate {
+@middleWidth: calc(100vw / 2);
 
+.navigate {
+  color: #7e7e7e;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  position: relative;
+  top: 81vh;
+  left: calc(@middleWidth - 20vw);
+
+  span {
+    padding-top: 36px;
+
+    &:hover {
+      cursor: pointer;
+      color: #2c75ea;
+    }
+  }
 }
