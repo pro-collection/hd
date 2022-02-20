@@ -12,6 +12,7 @@ const Header: FC = () => {
     history(path);
   });
 
+  // 是否高亮
   const getAction = useCallback(currentPath => location.pathname.includes(currentPath), [location.pathname]);
 
   return (
