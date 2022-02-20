@@ -1,13 +1,15 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-const path = require("path");
+const path = require('path');
+
+const env = process.env.ENV;
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   plugins: [react()],
@@ -16,5 +18,5 @@ export default defineConfig({
       scopeBehaviour: 'local',
     },
   },
-  // base: "https://cdn.jsdelivr.net/gh/pro-collection/hd/dist/"
+  base: env !== 'dev' ? 'https://cdn.jsdelivr.net/gh/pro-collection/hd/dist/' : '',
 });
