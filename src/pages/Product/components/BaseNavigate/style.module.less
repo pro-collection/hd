@@ -1,0 +1,54 @@
+.baseNavigate {
+  padding-top: 20vh;
+  display: flex;
+  .imgContainer {
+    width: 36vw;
+    min-width: 460px;
+  }
+
+  .navigate {
+    display: flex;
+    font-size: 1.5vw;
+    color: white;
+    margin-top: 30px;
+    flex-direction: column;
+    position: relative;
+    left: -6.5vw;
+    top: 18vw;
+
+    :global {
+      .nav1 {
+        transform: translateX(-2vw);
+      }
+
+      .nav2 {
+        transform: translateX(-1vw);
+      }
+
+      .nav3 {
+        transform: translateX(-0.5vw);
+      }
+
+      .nav4 {
+        transform: translateX(-1vw);
+      }
+
+      .nav5 {
+        transform: translateX(-2vw);
+      }
+    }
+
+    span {
+      padding-top: 2vw;
+
+      &:hover {
+        cursor: pointer;
+        color: #2c75ea;
+      }
+    }
+  }
+}
+
+/* 屏幕宽度小于 1220 的需要特殊处理一下 */
+
+

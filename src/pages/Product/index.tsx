@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import Header from '@/components/Header';
 import styles from './style.module.less';
+import BaseNavigate from '@/pages/Product/components/BaseNavigate';
 
 const Product: FC = () => {
   return (
     <div className={styles.productContainer}>
       <Header />
-      <div>
-        12312k3l12j3l
-      </div>
+
+      <BaseNavigate />
     </div>
   );
 };
