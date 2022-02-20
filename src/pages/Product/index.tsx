@@ -7,7 +7,6 @@ const Product: FC = () => {
   return (
     <div className={styles.productContainer}>
       <Header />
-
       <BaseNavigate />
     </div>
   );
