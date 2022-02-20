@@ -16,5 +16,5 @@ export default defineConfig({
       scopeBehaviour: 'local',
     },
   },
-  base: "https://cdn.jsdelivr.net/gh/pro-collection/hd/src/static/"
+  base: "https://cdn.jsdelivr.net/gh/pro-collection/hd/dist/"
 });
