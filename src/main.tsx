@@ -4,6 +4,9 @@ import "./index.css";
 import Home from "@/pages/Home";
 
 import { Route, Routes, HashRouter } from "react-router-dom";
+import Resume from "@/pages/Resume";
+import Product from "@/pages/Product";
+import Connect from "@/pages/Connect";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,6 +14,9 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/connect" element={<Connect />} />
         <Route
           path="*"
           element={

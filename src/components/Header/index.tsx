@@ -1,19 +1,32 @@
-import React, { FC } from 'react';
-import styles from "./style.module.less";
-import { useNavigate } from "react-router";
+import React, { FC, useCallback } from 'react';
+import styles from './style.module.less';
+import { useLocation, useNavigate } from 'react-router';
+import { useMemoizedFn } from 'ahooks';
+import { headerPath } from '@/components/Header/consts';
 
 const Header: FC = () => {
-  const history = useNavigate()
+  const history = useNavigate();
+  const location = useLocation();
 
-  const push = () => {
-    history('/home')
-  }
+  const push = useMemoizedFn((path) => {
+    history(path);
+  });
+
+  const getAction = useCallback(currentPath => location.pathname.includes(currentPath), [location.pathname]);
+
   return (
     <header className={styles.header}>
-      <span onClick={push}>首页</span>
-      <span>简历</span>
-      <span>作品</span>
-      <span>联系方式</span>
+      {headerPath.map(item => {
+        return (
+          <span
+            className={getAction(item.path) ? styles.action : ''}
+            key={item.path}
+            onClick={() => push(item.path)}
+          >
+            {item.name}
+          </span>
+        );
+      })}
     </header>
   );
 };
